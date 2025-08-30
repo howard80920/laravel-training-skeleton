@@ -17,3 +17,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# clients ignores
+/clients/.types
+
+**/caddy
+frankenphp
+frankenphp-worker.php
