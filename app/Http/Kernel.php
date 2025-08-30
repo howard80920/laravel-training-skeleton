@@ -16,11 +16,12 @@ class Kernel extends HttpKernel
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
+        \App\Http\Middleware\SetRootUrl::class,
         \Illuminate\Http\Middleware\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
-        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        // \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class, // 11版後預設不支持，骨架預設不開
     ];
 
     /**
@@ -43,6 +44,10 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'office' => [
+            'set.locale',
+        ],
     ];
 
     /**
@@ -64,5 +69,8 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'set.locale' => \App\Http\Middleware\SetLocale::class,
+        'json.response' => \App\Http\Middleware\ForceJsonResponse::class,
+        'auth.office' => \App\Http\Middleware\AuthenticateOffice::class,
     ];
 }
