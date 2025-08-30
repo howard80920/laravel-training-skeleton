@@ -69,8 +69,9 @@ return [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
-            'days' => 14,
+            'days' => 30,
             'replace_placeholders' => true,
+            'permission' => 0777,
         ],
 
         'slack' => [
@@ -125,6 +126,27 @@ return [
 
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
+        ],
+
+        /**
+         * 自定義日誌群組
+         */
+
+        /** 查詢日誌 */
+        'querylog' => [
+            'driver' => 'daily',
+            'path' => storage_path("logs/querylog.log"),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => $retentionDays,
+            'permission' => 0777,
+        ],
+        /** 慢查詢日誌 */
+        'slowlog' => [
+            'driver' => 'daily',
+            'path' => storage_path("logs/slowlog.log"),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => $retentionDays,
+            'permission' => 0777,
         ],
     ],
 
