@@ -137,7 +137,7 @@ return [
             'driver' => 'daily',
             'path' => storage_path("logs/querylog.log"),
             'level' => env('LOG_LEVEL', 'debug'),
-            'days' => $retentionDays,
+            'days' => 14,
             'permission' => 0777,
         ],
         /** 慢查詢日誌 */
@@ -145,7 +145,7 @@ return [
             'driver' => 'daily',
             'path' => storage_path("logs/slowlog.log"),
             'level' => env('LOG_LEVEL', 'debug'),
-            'days' => $retentionDays,
+            'days' => 14,
             'permission' => 0777,
         ],
     ],
