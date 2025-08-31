@@ -27,6 +27,7 @@
         "axios": "^1.9.0",
         "bootstrap": "^5.3.6",
         "date-fns": "^4.1.0",
+        "element-plus": "^2.11.1",
         "lodash-es": "^4.17.21",
         "momentum-modal": "^0.2.3",
         "pinia": "^3.0.3",
