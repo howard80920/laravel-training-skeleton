@@ -47,6 +47,7 @@ class Kernel extends HttpKernel
 
         'office' => [
             'set.locale',
+            \App\Http\Middleware\HandleInertiaRequestsOffice::class,
         ],
     ];
 
