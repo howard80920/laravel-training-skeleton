@@ -93,8 +93,8 @@ if (!function_exists('cursor_paginate_array')) {
     }
 }
 
-if (!function_exists('itemsArr')) {
-    function itemsArr($items, array $extras = [])
+if (!function_exists('items_array')) {
+    function items_array($items, array $extras = [])
     {
         return [ 'items' => $items ] + $extras;
     }
