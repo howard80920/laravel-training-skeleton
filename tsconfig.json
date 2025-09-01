@@ -25,6 +25,7 @@
         }
     },
     "include": [
+        "clients/.types/*.d.ts",
         "clients/**/*.ts",
         "clients/**/*.d.ts",
         "clients/**/*.vue",
