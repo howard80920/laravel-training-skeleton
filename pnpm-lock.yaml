@@ -26,6 +26,9 @@ importers:
       element-plus:
         specifier: ^2.11.1
         version: 2.11.1(vue@3.5.20(typescript@5.9.2))
+      laravel-vue-i18n:
+        specifier: ^2.8.0
+        version: 2.8.0(typescript@5.9.2)
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
@@ -846,6 +849,9 @@ packages:
     peerDependencies:
       vite: ^7.0.0
 
+  laravel-vue-i18n@2.8.0:
+    resolution: {integrity: sha512-5D4GvITMZaLVwnirMU8NeQBCSfhEqDyRHiFshfP9ycdczB6e2oYZl5ow95M2sLOViPCuroYzMXqybfG9yFhoCw==}
+
   local-pkg@1.1.2:
     resolution: {integrity: sha512-arhlxbFRmoQHl33a0Zkle/YWlmNwoyt6QNZEIJcqNbdrsix5Lvc4HyyI3EnwxTYlZYc32EbYrQ8SzEZ7dqgg9A==}
     engines: {node: '>=14'}
@@ -934,6 +940,9 @@ packages:
 
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
+
+  php-parser@3.2.2:
+    resolution: {integrity: sha512-voj3rzCJmEbwHwH3QteON28wA6K+JbcaJEofyUZkUXmcViiXofjbSbcE5PtqtjX6nstnnAEYCFoRq0mkjP5/cg==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -1899,6 +1908,13 @@ snapshots:
       vite: 7.1.3(sass@1.91.0)
       vite-plugin-full-reload: 1.2.0
 
+  laravel-vue-i18n@2.8.0(typescript@5.9.2):
+    dependencies:
+      php-parser: 3.2.2
+      vue: 3.5.20(typescript@5.9.2)
+    transitivePeerDependencies:
+      - typescript
+
   local-pkg@1.1.2:
     dependencies:
       mlly: 1.8.0
@@ -1972,6 +1988,8 @@ snapshots:
   pathe@2.0.3: {}
 
   perfect-debounce@1.0.0: {}
+
+  php-parser@3.2.2: {}
 
   picocolors@1.1.1: {}
 
